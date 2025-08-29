@@ -125,9 +125,13 @@ st.title("Výběr možností")
 
 vybrane_texty = []
 
-# Pro každý vstup vytvoříme selectbox
+# Pro každý vstup vytvoříme selectbox vedle názvu
 for vstup, moznosti_list in moznosti.items():
-    vybrano = st.selectbox(f"{vstup}:", [""] + moznosti_list, key=vstup)
+    col1, col2 = st.columns([1, 2])  # první sloupec menší, druhý širší
+    with col1:
+        st.write(f"{vstup}:")
+    with col2:
+        vybrano = st.selectbox("", [""] + moznosti_list, key=vstup)
     if vybrano:
         vybrane_texty.append(texty[vybrano])
 

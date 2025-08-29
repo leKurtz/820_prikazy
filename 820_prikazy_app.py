@@ -121,7 +121,7 @@ texty = {
     I1: "GRM=2;"
 }
 
-st.title("Výběr možností")
+st.markdown("<p style='font-size:20px;'>Výběr možností nastavení</p>", unsafe_allow_html=True)
 
 vybrane_texty = []
 

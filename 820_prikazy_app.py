@@ -51,7 +51,7 @@ H3 = "jizda dratova Acc + Nap"
 H4 = "jízda ACC"
 H5 = "jízda +15"
 H6 = "jízda Nap"
-I1 = "povolit"
+I1 = "roaming"
 
 # Možnosti pro jednotlivé vstupy
 moznosti = {
@@ -63,7 +63,7 @@ moznosti = {
     "CAN1": [F1, F2, F3, F4, F5, F6, F7, F8],
     "CAN2": [G1, G2, G3, G4, G5, G6, G7, G8],
     "Spínání od": [H1, H2, H3, H4, H5, H6],
-    "Roaming": [I1]
+    "Ostatní": [I1]
 }
 
 # Texty

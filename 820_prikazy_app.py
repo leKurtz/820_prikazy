@@ -1,33 +1,33 @@
 import streamlit as st
 
 # hodnoty vstupu
-A1 = "digitální vstup"
+A1 = "digitální vstup IO1"
 A2 = "přepínač S/S"
-A3 = "analogový vstup"
+A3 = "analogový vstup IO1"
 A4 = "5V zdroj (trvale)"
 A5 = "5V zdroj (při +15)"
 A6 = "in - OPER - nastavení pro APEX (generování poplachů dle SASS/GAS do OPERu na základě sepnutí IO1)"
 A7 = "out - OPER - nastavení pro APEX (generování poplachů dle SASS/GAS do OPERu a sepnutí IO1)"
-A8 = "výstup"
+A8 = "výstup IO1"
 A9 = "AN - IBR"
 B1 = "přepínač S/S"
-B2 = "dig. vstup"
-B3 = "analogový vstup"
-B4 = "výstup"
+B2 = "dig. vstup IO2"
+B3 = "analogový vstup IO2"
+B4 = "výstup IO2"
 B5 = "in - OPER -nastavení pro APEX (generování poplachů dle SASS/GAS do OPERu na základě sepnutí IO1)"
 B6 = "AN - IBR"
-C1 = "dig. vstup"
+C1 = "dig. vstup IO3"
 C2 = "přepínač S/S"
 C3 = "váhy RVS"
-C4 = "výstup"
+C4 = "výstup IO3"
 C5 = "RFID"
 D1 = "+15 drátová"
-D2 = "dig. vstup"
+D2 = "dig. vstup IO4"
 D3 = "přepínač S/S"
 E1 = "RFID"
-E2 = "dig. vstup"
+E2 = "dig. vstup IO5"
 E3 = "přepínač S/S"
-E4 = "výstup"
+E4 = "výstup IO5"
 E5 = "Dallas - při použití teploměrů je nutné nastavit IO1 jako 5V zdroj pro jejich napájení"
 F1 = "FMS rychlost 250"
 F2 = "FMS rychlost 500"
@@ -144,7 +144,7 @@ if input_text:
         if kod in input_text:
             nalezene.append(f"{popis}")
     if nalezene:
-        st.write("Vložený NKP příkaz je nastavení pro:")
+        st.write("Vložený NKP příkaz je nastavení pro")
         st.write(", ".join(nalezene))
     else:
         st.write("Žádná shoda nenalezena.")

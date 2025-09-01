@@ -82,7 +82,7 @@ texty = {
     B3: "iop(d,{2,3},1);iop(a, 17,{3},1);",
     B4: "iop(d,{2,3},1);iop(a, 3,{3},1);",
     B5: "iop(d,{2,3},1);iop(a, 3,{3},1);",
-    B6: 'iop(d,{2,3},1);iop(a, 17,{3},1);anp(at,3,5000,5,60);IOR=10;IOF=21;SEB={"1991010","","","","",""};SASS={{0x20000,{0}},{0,{2,3}}};CANDEV=4;CANDEV;', #pozor zde jen ' '
+    B6: 'iop(d,{2,3},1);iop(a, 17,{3},1);anp(at,3,5000,5,60);IOR=10;IOF=21;SEB={"1991010","","","","",""};SASS={{0x20000,{0}},{0,{2,3}}};CANDEV=4;CANDEV;',
     C1: "iop(d,{4,5},1);iop(a, 0,{4},1);",
     C2: "iop(d,{4,5},1);iop(a, 5,{4},1);",
     C3: "iop(d,{4,5,8,9},1);iop(a, 25,{4,9},1);",
@@ -121,16 +121,30 @@ texty = {
     I1: "GRM=2;"
 }
 
+# --- Inverzní slovník (text -> popis) ---
+inverse_texty = {v: k for k, v in texty.items()}
+
 st.markdown("<p style='font-size:20px;'>Výběr možností nastavení</p>", unsafe_allow_html=True)
 
+# Výběr možností přes selectboxy
 vybrane_texty = []
-
-# Pro každý vstup vytvoříme selectbox
 for vstup, moznosti_list in moznosti.items():
     vybrano = st.selectbox(f"{vstup}:", [""] + moznosti_list, key=vstup)
     if vybrano:
         vybrane_texty.append(texty[vybrano])
 
-# Zobrazení výsledného textu
+# Zobrazení dopředného výstupu
 vystup = "".join(vybrane_texty)
-st.text_area("Výstup (kopírovatelný)", value=vystup, height=250)
+input_text = st.text_area("NKP příkaz", value=vystup, height=250)
+
+# --- Opačný směr: zjistit, co odpovídá vloženému textu ---
+if input_text:
+    nalezene = []
+    for kod, popis in inverse_texty.items():
+        if kod in input_text:
+            nalezene.append(f"{popis}")
+    if nalezene:
+        st.write("Vložený NKP příkaz je nastavení pro:")
+        st.write(", ".join(nalezene))
+    else:
+        st.write("Žádná shoda nenalezena.")

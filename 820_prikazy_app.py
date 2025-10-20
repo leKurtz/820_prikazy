@@ -32,7 +32,7 @@ E1 = "RFID IO5"
 E2 = "dig. vstup IO5"
 E3 = "přep. S/S IO5"
 E4 = "výstup IO5"
-E5 = "teploměry Dallas IO5- při použití teploměrů je nutné nastavit IO1 jako 5V zdroj pro jejich napájení"
+E5 = "teploměry Dallas IO5 + nastavit IO1 5V zdroj (trvale)"
 
 F1 = "FMS 250 CAN1"
 F2 = "FMS 500 CAN1"
@@ -40,7 +40,7 @@ F3 = "Full FMS 250 CAN1"
 F4 = "Full FMS 500 CAN1"
 F5 = "tachograf 250 CAN1"
 F6 = "tachograf 500 CAN1"
-F7 = "IBR, pouze čtení zprávy o celkovém stavu nádrže CAN1"
+F7 = "IBR, pouze celkový stav nádrže CAN1"
 F8 = "zakázání CAN1"
 
 G1 = "FMS 250 CAN2"
@@ -49,7 +49,7 @@ G3 = "Full FMS 250 CAN2"
 G4 = "Full FMS 500 CAN2"
 G5 = "tachograf 250 CAN2"
 G6 = "tachograf 500 CAN2"
-G7 = "IBR, pouze čtení zprávy o celkovém stavu nádrže CAN2"
+G7 = "IBR, pouze celkový stav nádrže CAN2"
 G8 = "zakázání CAN2"
 
 H1 = "dotaz na vstupy"
@@ -87,8 +87,8 @@ moznosti = {
     "+AKU": [],
     "IO3": [C1, C2, C3, C4, C5],
     "+30": [],
-    "CAN2 H": [G1, G2, G3, G4, G5, G6, G7, G8],
-    "CAN1 H": [F1, F2, F3, F4, F5, F6, F7, F8],
+    "CAN2 H": [],
+    "CAN1 H": [],
     "IO2": [B1, B2, B3, B4, B5, B6],
     "IO4": [D1, D2, D3],
     "IO5": [E1, E2, E3, E4, E5],

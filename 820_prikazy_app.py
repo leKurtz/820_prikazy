@@ -183,7 +183,7 @@ texty = {
 inverse_texty = {v: k for k, v in texty.items()}
 
 # --- Rozložení rozhraní ---
-st.markdown("### ⚙️ Konfigurace IO / CAN rozhraní")
+st.markdown("### ⚙️ Nastavení vstupů NKP příkazy a další")
 st.markdown("#### Rozložení svorek podobně jako panel jednotky:")
 
 # --- První řádek (CAN2 L, CAN1 L, IO1, +AKU, IO3, +30) ---

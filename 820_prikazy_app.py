@@ -70,7 +70,7 @@ J3 = "ověření nastavení roamingu"
 K1 = "dotaz na GPS ant"
 K2 = "auto detekce GPS ant"
 K3 = "interní GPS ant"
-K4 = "extrerní GPS antu"
+K4 = "externí GPS ant"
 
 Z1 = "dotaz na verzi"
 Z2 = "dotaz na verzi CAN knihovny"
@@ -185,6 +185,8 @@ inverse_texty = {v: k for k, v in texty.items()}
 # --- Rozložení rozhraní ---
 st.markdown("### Nastavení vstupů NKP příkazy a další")
 
+st.markdown("vzor sms zprávy poslané přes telefon: z001 12345678 NKP_příkaz")
+
 # --- První řádek (CAN2 L, CAN1 L, IO1, +AKU, IO3, +30) ---
 cols_top = st.columns([5, 5, 5, 2, 5, 2])
 labels_top = ["CAN2 L", "CAN1 L", "IO1", "+AKU", "IO3", "+30"]
@@ -206,6 +208,10 @@ for i, label in enumerate(labels_bottom):
         if vybrano:
             vybrane_texty.append(texty.get(vybrano, ""))
 
+# --- Info k nastaveni CAN a D8 ---
+
+st.markdown("Při nastavení FMS je třeba poslat ještě NKP příkaz: CANDEV=3840;\n\n Při nastavení D8 je třeba poslat ještě NKP příkaz: PUPD={0,1,0,1,1};")
+
 # --- Třetí řádek (spínání od, roaming, GPS anténa, ostatní) ---
 cols_down = st.columns([5, 5, 5, 5, 5])
 labels_down = ["vstupy", "spínání od", "roaming", "GPS anténa", "ostatní"]
@@ -223,7 +229,7 @@ st.text_area("NKP příkaz", value=vystup, height=200)
 # --- Inverzní hledání (opačný směr) ---
 input_text = st.text_area("Zadej NKP příkaz pro rozpoznání:", height=150)
 if input_text:
-    nalezene = [popis for kod, popis in inverse_texty.items() if kod in input_text]
+    nalezene = [popis for kod, popis in inverse_texty.items() if input_text.strip() == kod.strip()]
     if nalezene:
         st.success("Vložený NKP příkaz odpovídá nastavením:")
         st.write(", ".join(nalezene))

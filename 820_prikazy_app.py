@@ -183,8 +183,7 @@ texty = {
 inverse_texty = {v: k for k, v in texty.items()}
 
 # --- Rozložení rozhraní ---
-st.markdown("### ⚙️ Nastavení vstupů NKP příkazy a další")
-st.markdown("#### Rozložení svorek podobně jako panel jednotky:")
+st.markdown("### Nastavení vstupů NKP příkazy a další")
 
 # --- První řádek (CAN2 L, CAN1 L, IO1, +AKU, IO3, +30) ---
 cols_top = st.columns([5, 5, 5, 2, 5, 2])

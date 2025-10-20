@@ -62,7 +62,7 @@ I3 = "jizda Acc, Nap"
 I4 = "jízda ACC"
 I5 = "jízda +15"
 I6 = "jízda Nap"
-I7 = "dotaz na nastevní spínání"
+I7 = "dotaz na nastavení spínání"
 
 J1 = "nastavení roamingu"
 J2 = "deaktivace roamingu"

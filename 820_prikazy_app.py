@@ -62,10 +62,11 @@ I3 = "jizda Acc, Nap"
 I4 = "jízda ACC"
 I5 = "jízda +15"
 I6 = "jízda Nap"
+I7 = "dotaz na nastevní spínání"
 
 J1 = "nastavení roamingu"
 J2 = "deaktivace roamingu"
-J3 = "ověření nastavení roamingu"
+J3 = "dotaz na nastavení roamingu"
 
 K1 = "dotaz na GPS ant"
 K2 = "auto detekce GPS ant"
@@ -94,7 +95,7 @@ moznosti = {
     "IO5": [E1, E2, E3, E4, E5],
     "-30": [],
     "vstupy": [H1, H2, H3],
-    "spínání od": [I1, I2, I3, I4, I5, I6],
+    "spínání od": [I1, I2, I3, I4, I5, I6, I7],
     "roaming": [J1, J2, J3],
     "GPS anténa": [K1, K2, K3, K4],
     "ostatní": [Z1, Z2, Z3, Z4, Z5],
@@ -163,6 +164,7 @@ texty = {
     I4: "DSM=1;",
     I5: "DSM=2;",
     I6: "DSM=8;",
+    I7: "DSM;",
     
     J1: "GRM=2;",
     J2: "GRM=0;",

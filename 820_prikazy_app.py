@@ -188,7 +188,7 @@ st.markdown("### Nastavení vstupů NKP příkazy a další")
 st.markdown("vzor sms zprávy poslané přes telefon: z001 12345678 NKP_příkaz")
 
 # --- První řádek (CAN2 L, CAN1 L, IO1, +AKU, IO3, +30) ---
-cols_top = st.columns([5, 5, 5, 2, 5, 2])
+cols_top = st.columns([5, 5, 5, 5, 5, 5])
 labels_top = ["CAN2 L", "CAN1 L", "IO1", "+AKU", "IO3", "+30"]
 
 vybrane_texty = []
@@ -199,7 +199,7 @@ for i, label in enumerate(labels_top):
             vybrane_texty.append(texty.get(vybrano, ""))
 
 # --- Druhý řádek (CAN2 H, CAN1 H, IO2, IO4, IO5, -30) ---
-cols_bottom = st.columns([5, 5, 5, 5, 5, 2])
+cols_bottom = st.columns([5, 5, 5, 5, 5, 5])
 labels_bottom = ["CAN2 H", "CAN1 H", "IO2", "IO4", "IO5", "-30"]
 
 for i, label in enumerate(labels_bottom):
